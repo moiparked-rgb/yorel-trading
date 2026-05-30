@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050811'/%3E%3Ctext y='65' x='50' font-family='sans-serif' font-weight='bold' font-size='45' fill='%2300E676' text-anchor='middle'%3EYM%3C/text%3E%3C/svg%3E">
-    <title>Yorel Trading | Signaux & Performance</title>
-    <!-- Tailwind CSS CDN -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23FFFFFF'/%3E%3Ctext y='65' x='50' font-family='sans-serif' font-weight='bold' font-size='45' fill='%2300C853' text-anchor='middle'%3EYM%3C/text%3E%3C/svg%3E">
+    <title>YM Trading | Mentorat & Autonomie Prop Firms</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Space Grotesk -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -15,30 +15,25 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #050811;
+            background-color: #FAFAFA;
             -webkit-tap-highlight-color: transparent;
         }
         .font-tech {
             font-family: 'Space Grotesk', sans-serif;
         }
         .glow-green {
-            box-shadow: 0 0 20px rgba(0, 230, 118, 0.25);
-        }
-        .glow-text {
-            text-shadow: 0 0 10px rgba(0, 230, 118, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 200, 83, 0.08);
         }
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 12px rgba(0, 230, 118, 0.4); }
-            50% { box-shadow: 0 0 24px rgba(0, 230, 118, 0.7); }
+            0%, 100% { box-shadow: 0 0 12px rgba(0, 200, 83, 0.2); }
+            50% { box-shadow: 0 0 24px rgba(0, 200, 83, 0.4); }
         }
         .animate-pulse-glow {
             animation: pulse-glow 2s infinite;
         }
-        /* Masquer la scrollbar pour une interface type App */
         ::-webkit-scrollbar {
             display: none;
         }
-        /* Style pour les accordéons interactifs en pur CSS sur mobile */
         .tab-toggle:checked ~ .tab-content {
             max-height: 500px;
             opacity: 1;
@@ -49,304 +44,278 @@
         }
     </style>
 </head>
-<body class="text-gray-300 antialiased overflow-x-hidden bg-[#050811]">
+<body class="text-gray-700 antialiased overflow-x-hidden bg-[#FAFAFA]">
 
-    <!-- ÉLÉMENTS DE DESIGN EN ARRIÈRE-PLAN -->
     <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-[800px] right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-    <!-- ========================================== -->
-    <!-- INTERFACE MOBILE UNIQUE (Optimisée Téléphone) -->
-    <!-- ========================================== -->
     <div class="block md:hidden min-h-screen flex flex-col justify-between p-4 pb-6">
         
-        <!-- Top Bar App Style -->
-        <div class="flex items-center justify-between bg-[#0c1220]/80 border border-gray-800/60 p-3 rounded-xl backdrop-blur-md">
+        <div class="flex items-center justify-between bg-white border border-gray-200 p-3 rounded-xl shadow-sm">
             <div class="flex items-center space-x-2">
-                <span class="font-tech text-base font-bold tracking-wider text-white">YOREL <span class="text-[#00E676]">TRADING</span></span>
-                <span class="flex items-center bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded-full space-x-1">
+                <span class="font-tech text-base font-bold tracking-wider text-gray-900">STUDIO YM <span class="text-[#00C853]">TRADER</span></span>
+                <span class="flex items-center bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded-full space-x-1">
                     <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span>Meta Verified</span>
+                    <span>Vérifié</span>
                 </span>
             </div>
-            <div class="w-7 h-7 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center">
-                <span class="w-2 h-2 bg-[#00E676] rounded-full animate-pulse"></span>
+            <div class="w-7 h-7 bg-emerald-50 border border-emerald-100 rounded-full flex items-center justify-center">
+                <span class="w-2 h-2 bg-[#00C853] rounded-full animate-pulse"></span>
             </div>
         </div>
 
-        <!-- Section Graphique Principal Mobile -->
-        <div class="my-4 bg-[#0c1220]/40 border border-gray-800/80 rounded-2xl p-4 flex flex-col justify-between">
+        <div class="my-4 bg-white border border-gray-200 rounded-2xl p-4 flex flex-col justify-between shadow-sm">
             <div class="flex justify-between items-start mb-2">
                 <div>
-                    <span class="text-[10px] uppercase font-bold text-[#00E676] bg-emerald-500/10 px-2 py-0.5 rounded tracking-wider">Trading Polyvalent</span>
-                    <h2 class="font-tech text-sm font-bold text-white mt-1">Suivi des Positions Actives</h2>
+                    <span class="text-[10px] uppercase font-bold text-[#00C853] bg-emerald-50 px-2 py-0.5 rounded tracking-wider">Price Action</span>
+                    <h2 class="font-tech text-sm font-bold text-gray-900 mt-1">Méthodologie & Stratégie</h2>
                 </div>
                 <div class="text-right">
-                    <div class="font-tech text-base font-bold text-white">Analyses Live</div>
-                    <div class="text-[10px] text-emerald-400 font-medium">Marchés Financiers</div>
+                    <div class="font-tech text-base font-bold text-gray-900">Conseils & Suivi</div>
+                    <div class="text-[10px] text-emerald-600 font-medium">Objectif Autonomie</div>
                 </div>
             </div>
 
-            <!-- Mini Graphique interactif en pur CSS -->
-            <div class="h-24 w-full flex items-end justify-between space-x-1 pt-4 border-b border-gray-800/40 relative">
-                <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none"></div>
-                <div class="w-full bg-red-500/10 rounded-t h-12 relative flex justify-center"><div class="absolute -top-1 w-[1px].5 h-14 bg-red-500/60"></div></div>
-                <div class="w-full bg-[#00E676]/20 rounded-t h-20 relative flex justify-center"><div class="absolute -top-2 w-[1px].5 h-22 bg-[#00E676]"></div></div>
-                <div class="w-full bg-red-500/10 rounded-t h-10 relative flex justify-center"><div class="absolute -top-1 w-[1px].5 h-12 bg-red-500/60"></div></div>
-                <div class="w-full bg-[#00E676]/30 border-t-2 border-[#00E676] rounded-t h-28 relative flex justify-center"><div class="absolute -top-2 w-[1px].5 h-30 bg-[#00E676]"></div></div>
+            <div class="h-24 w-full flex items-end justify-between space-x-1 pt-4 border-b border-gray-100 relative">
+                <div class="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb60_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb60_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none"></div>
+                <div class="w-full bg-red-100 rounded-t h-12 relative flex justify-center"><div class="absolute -top-1 w-[2px] h-14 bg-red-400"></div></div>
+                <div class="w-full bg-[#00C853]/10 rounded-t h-20 relative flex justify-center"><div class="absolute -top-2 w-[2px] h-22 bg-[#00C853]"></div></div>
+                <div class="w-full bg-red-100 rounded-t h-10 relative flex justify-center"><div class="absolute -top-1 w-[2px] h-12 bg-red-400"></div></div>
+                <div class="w-full bg-[#00C853]/20 border-t-2 border-[#00C853] rounded-t h-28 relative flex justify-center"><div class="absolute -top-2 w-[2px] h-30 bg-[#00C853]"></div></div>
             </div>
 
-            <!-- Stats Express Mobiles -->
-            <div class="grid grid-cols-3 gap-2 text-center mt-3 pt-3 border-t border-gray-800/40">
+            <div class="grid grid-cols-3 gap-2 text-center mt-3 pt-3 border-t border-gray-100">
                 <div>
-                    <div class="font-tech text-xs font-bold text-white">Polyvalent</div>
-                    <div class="text-[9px] text-gray-500 uppercase">Profil</div>
+                    <span class="font-tech text-xs font-bold text-gray-900">Discipline</span>
+                    <div class="text-[9px] text-gray-400 uppercase">Valeur</div>
                 </div>
                 <div>
-                    <div class="font-tech text-xs font-bold text-[#00E676]">Prop Firms</div>
-                    <div class="text-[9px] text-gray-500 uppercase">Objectif</div>
+                    <span class="font-tech text-xs font-bold text-[#00C853]">Prop Firms</span>
+                    <div class="text-[9px] text-gray-400 uppercase">Spécialisation</div>
                 </div>
                 <div>
-                    <div class="font-tech text-xs font-bold text-white">0 CFA</div>
-                    <div class="text-[9px] text-gray-500 uppercase">Accès Canal</div>
+                    <span class="font-tech text-xs font-bold text-gray-900">Privé</span>
+                    <div class="text-[9px] text-gray-400 uppercase">Accès Canal</div>
                 </div>
             </div>
         </div>
 
-        <!-- NAVIGATION INTERACTIVE CLASSÉE (Système de boutons cliquables pour dérouler les infos) -->
         <div class="space-y-3 mb-6">
             
-            <!-- Onglet 1 : Concept & Signaux -->
-            <div class="bg-[#0c1220]/60 border border-gray-800/80 rounded-xl overflow-hidden p-1">
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden p-1 shadow-sm">
                 <input type="checkbox" id="tab1" class="hidden tab-toggle" checked>
                 <label for="tab1" class="tab-label flex items-center justify-between p-3 cursor-pointer select-none">
                     <div class="flex items-center space-x-3">
                         <span class="text-base">📈</span>
-                        <div class="text-xs font-bold text-white">Suis mes Profits & Mes Signaux</div>
+                        <div class="text-xs font-bold text-gray-900">Mon Parcours & Conseils Quotidiens</div>
                     </div>
-                    <svg class="w-4 h-4 text-gray-500 transition-transform duration-300 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-4 h-4 text-gray-400 transition-transform duration-300 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </label>
-                <div class="tab-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-3 text-[11px] text-gray-400 leading-relaxed border-t border-gray-800/40">
-                    Pas de fausses promesses ni de stratégie miracle vendue en 30 secondes. En tant que trader Gold, je te partage mes propres prises de position et mes signaux pour que tu puisses observer ma gestion des risques en temps réel.
+                <div class="tab-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-3 text-[11px] text-gray-500 leading-relaxed border-t border-gray-100">
+                    Pas de fausses promesses ni de gains magiques. Je partage en toute transparence mes analyses, ma routine de trader et mes conseils psychologiques pour t'éviter les erreurs fatales commises par la majorité des débutants.
                 </div>
             </div>
 
-            <!-- Onglet 2 : Pourquoi les gens échouent VS La Solution -->
-            <div class="bg-[#0c1220]/60 border border-gray-800/80 rounded-xl overflow-hidden p-1">
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden p-1 shadow-sm">
                 <input type="checkbox" id="tab2" class="hidden tab-toggle">
                 <label for="tab2" class="tab-label flex items-center justify-between p-3 cursor-pointer select-none">
                     <div class="flex items-center space-x-3">
-                        <span class="text-base">⚡</span>
-                        <div class="text-xs font-bold text-white">Vérité vs Ma Méthode</div>
+                        <span class="text-base">🧠</span>
+                        <div class="text-xs font-bold text-gray-900">Pourquoi 90% échouent VS La Solution</div>
                     </div>
-                    <svg class="w-4 h-4 text-gray-500 transition-transform duration-300 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-4 h-4 text-gray-400 transition-transform duration-300 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </label>
-                <div class="tab-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-3 text-[11px] text-gray-400 space-y-2 border-t border-gray-800/40">
-                    <div class="text-red-400 font-medium">❌ Pourquoi 90% échouent :</div>
-                    <p class="pl-2 border-l border-red-500/40">Dépendance aveugle à des canaux bidons et absence totale de Risk Management.</p>
-                    <div class="text-[#00E676] font-medium pt-1">✅ Ce que tu vas voir avec moi :</div>
-                    <p class="pl-2 border-l border-emerald-500/40">Une lecture propre du prix (Price Action), de la discipline de fer, et une méthodologie froide adaptée aux exigences des Prop Firms.</p>
+                <div class="tab-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-3 text-[11px] text-gray-500 space-y-2 border-t border-gray-100">
+                    <div class="text-red-500 font-medium">❌ Pourquoi ils échouent :</div>
+                    <p class="pl-2 border-l border-red-300">Ils dépendent aveuglément des signaux des autres et n'apprennent jamais à lire un graphique par eux-mêmes.</p>
+                    <div class="text-[#00C853] font-medium pt-1">✅ L'opportunité qui s'offre à toi :</div>
+                    <p class="pl-2 border-l border-emerald-300">Développer tes propres compétences, maîtriser le Price Action pur et acquérir la rigueur mathématique indispensable pour piloter des capitaux (Prop Firms).</p>
                 </div>
             </div>
 
-            <!-- Onglet 3 : Le Programme de Formation (Optionnel) -->
-            <div class="bg-[#0c1220]/60 border border-gray-800/80 rounded-xl overflow-hidden p-1">
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden p-1 shadow-sm">
                 <input type="checkbox" id="tab3" class="hidden tab-toggle">
                 <label for="tab3" class="tab-label flex items-center justify-between p-3 cursor-pointer select-none">
                     <div class="flex items-center space-x-3">
                         <span class="text-base">🎓</span>
-                        <div class="text-xs font-bold text-blue-400">Formation Accompagnement (Optionnel)</div>
+                        <div class="text-xs font-bold text-blue-600">Accompagnement Privé (Sur Demande)</div>
                     </div>
-                    <svg class="w-4 h-4 text-gray-500 transition-transform duration-300 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-4 h-4 text-gray-400 transition-transform duration-300 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </label>
-                <div class="tab-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-3 text-[11px] text-gray-400 space-y-2 border-t border-gray-800/40">
-                    <p>Pour ceux qui ne veulent pas juste suivre mais comprendre, une formation complète est disponible sur demande :</p>
-                    <ul class="space-y-1 list-disc list-inside text-gray-300">
-                        <li>Maitrise des structures microscopiques & macro.</li>
-                        <li>Gestion mathématique stricte du risque.</li>
-                        <li>Règles et plans de validation pour les Prop Firms.</li>
-                        <li>Psychologie d'exécution froide (agir comme un robot).</li>
+                <div class="tab-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-3 text-[11px] text-gray-500 space-y-2 border-t border-gray-100">
+                    <p>Pour passer au niveau supérieur et devenir totalement autonome, un programme de mentorat complet et structuré est disponible :</p>
+                    <ul class="space-y-1 list-disc list-inside text-gray-700">
+                        <li>Lecture approfondie de la structure des prix.</li>
+                        <li>Gestion millimétrée du risque et des drawdowns.</li>
+                        <li>Processus de préparation pour valider les Prop Firms.</li>
+                        <li>Psychologie de trading froide et sans émotion.</li>
                     </ul>
                 </div>
             </div>
 
         </div>
 
-        <!-- Bouton d'Action Fixe Bas de Page Mobile -->
         <div>
-            <!-- REMPLACE TON_NUMERO_DE_TELEPHONE CI-DESSOUS -->
-            <a href="https://wa.me/TON_NUMERO_DE_TELEPHONE?text=Salut%20Yorel,%20je%20veux%20rejoindre%20ton%20canal%20pour%20suivre%20tes%20profits%20et%20recevoir%20tes%20signaux%20!" 
+            <a href="https://api.whatsapp.com/send?phone=2250554365850&text=Salut%20Yorel,%20je%20viens%20de%20découvrir%20ton%20site.%20Je%20veux%20rejoindre%20ton%20canal%20privé%20et%20en%20savoir%20plus%20sur%20ta%20méthodologie%20!" 
                target="_blank"
-               class="w-full inline-flex items-center justify-center space-x-3 bg-[#00E676] text-black font-tech font-bold text-sm py-4 rounded-xl transition-all duration-300 active:scale-95 animate-pulse-glow shadow-lg">
+               class="w-full inline-flex items-center justify-center space-x-3 bg-[#00C853] text-white font-tech font-bold text-sm py-4 rounded-xl transition-all duration-300 active:scale-95 animate-pulse-glow shadow-md hover:bg-[#00b24a]">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-3.807c1.616.96 3.2 1.487 4.9.1.488 4.887.048 9.586-4.382 11.751-6.633.003-12.01-5.374-12.013-12.007-.002-3.11 1.162-6.033 3.277-8.235C4.848 1.543 7.63.31 10.702.31c5.996.002 10.873 4.88 10.876 10.88.002 2.91-1.132 5.647-3.193 7.712-2.062 2.064-4.8 3.2-7.713 3.199-1.822-.001-3.536-.482-5.025-1.429l-.36-.214-3.733.977 1.004-3.64-.23-.368z"/></svg>
-                <span>REJOINDRE LE CANAL WHATSAPP</span>
+                <span>REJOINDRE L'ÉCOSYSTÈME PRIVÉ</span>
             </a>
         </div>
     </div>
 
 
-    <!-- ========================================== -->
-    <!-- INTERFACE PC (Masquée sur Mobile) -->
-    <!-- ========================================== -->
     <div class="hidden md:block">
         
-        <!-- Header -->
-        <header class="fixed top-0 left-0 w-full z-50 bg-[#050811]/80 backdrop-blur-md border-b border-gray-800/60">
+        <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
             <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <span class="font-tech text-xl font-bold tracking-wider text-white">YOREL<span class="text-[#00E676]">.</span>TRADING</span>
-                    <div class="flex items-center space-x-1.5 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full">
-                        <span class="w-2 h-2 bg-[#00E676] rounded-full animate-pulse"></span>
-                        <span class="text-[10px] uppercase font-semibold text-[#00E676] tracking-wider">Live</span>
+                    <span class="font-tech text-xl font-bold tracking-wider text-gray-900">STUDIO YM<span class="text-[#00C853] font-black">.</span>TRADER</span>
+                    <div class="flex items-center space-x-1.5 bg-emerald-550 border border-emerald-200 px-2 py-0.5 rounded-full">
+                        <span class="w-2 h-2 bg-[#00C853] rounded-full animate-pulse"></span>
+                        <span class="text-[10px] uppercase font-semibold text-[#00C853] tracking-wider">Écosystème Actif</span>
                     </div>
                 </div>
                 <div>
-                    <a href="#cta-section" class="bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm px-4 py-2 rounded-lg border border-gray-700 transition-all duration-300">
-                        Rejoindre
+                    <a href="#cta-section" class="bg-gray-900 hover:bg-gray-800 text-white font-medium text-sm px-4 py-2 rounded-lg transition-all duration-300">
+                        Me Contacter
                     </a>
                 </div>
             </div>
         </header>
 
-        <!-- Hero Section -->
         <section class="relative pt-40 pb-20 px-4 max-w-5xl mx-auto text-center">
-            <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
+            <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 text-blue-600 text-xs font-medium px-3 py-1.5 rounded-full mb-6 shadow-sm">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span class="tracking-wide">Canal WhatsApp Officiel Vérifié</span>
+                <span class="tracking-wide font-semibold">Canal WhatsApp Officiel & Privé</span>
             </div>
 
-            <h1 class="font-tech text-6xl font-bold text-white tracking-tight leading-none mb-6">
+            <h1 class="font-tech text-6xl font-bold text-gray-900 tracking-tight leading-none mb-6">
                 Le Trading n'est pas un hasard.<br>
-                C'est une <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00E676] to-emerald-400 glow-text">Discipline de Précision</span>.
+                C'est une <span class="text-[#00C853]">Discipline de Précision</span>.
             </h1>
 
-            <p class="text-gray-400 text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                Observe mes performances au quotidien, reçois mes signaux en direct sur les marchés financiers et développe tes compétences grâce à un accompagnement structuré.
+            <p class="text-gray-500 text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Prends enfin le contrôle de ton avenir financier. Découvre mes conseils, évite les pièges du marché et développe tes compétences pour devenir 100% autonome sur les comptes financés.
             </p>
 
             <div class="mb-16">
-                <a href="#cta-section" class="inline-flex items-center space-x-3 bg-[#00E676] hover:bg-[#00c865] text-black font-tech font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-1 animate-pulse-glow">
-                    <span>Accéder au Canal Privé</span>
+                <a href="#cta-section" class="inline-flex items-center space-x-3 bg-[#00C853] hover:bg-[#00b24a] text-white font-tech font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-emerald-500/10">
+                    <span>Accéder à l'Écosystème</span>
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.93 19.07A9.96 9.96 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10c-1.85 0-3.58-.5-5.07-1.37L2 22l1.07-4.93zM12 4c-4.42 0-8 3.58-8 8 0 1.63.49 3.15 1.34 4.42L4.67 19.33l2.97-.67A7.93 7.93 0 0 0 12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8zm3.5 10.5c-.17-.08-.96-.47-1.11-.53-.15-.05-.26-.08-.37.08-.11.17-.43.53-.53.64-.1.11-.2.13-.37.05A5.3 5.3 0 0 1 10.5 13a5.86 5.86 0 0 1-1.83-2.28c-.1-.17 0-.25.07-.34.07-.07.17-.2.25-.3.08-.1.11-.17.17-.3.06-.13.03-.25-.02-.34-.05-.08-.37-.91-.51-1.25-.14-.33-.28-.28-.38-.28h-.33c-.11 0-.3.04-.45.2-.16.16-.6.59-.6 1.44 0 .85.62 1.67.71 1.79.08.12 1.22 1.87 2.96 2.62.42.18.74.29.99.37.42.13.8.11 1.1.07.34-.05.96-.39 1.1-.77.13-.38.13-.7 0-.77-.04-.07-.15-.11-.32-.19z"/></svg>
                 </a>
             </div>
 
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-4 gap-8 border-t border-b border-gray-800/80 py-8 max-w-4xl mx-auto">
+            <div class="grid grid-cols-4 gap-8 border-t border-b border-gray-200 py-8 max-w-4xl mx-auto">
                 <div>
-                    <div class="font-tech text-4xl font-bold text-white mb-1">Scalping</div>
-                    <div class="text-sm text-gray-500 uppercase tracking-wider">Style de Stratégie</div>
+                    <div class="font-tech text-4xl font-bold text-gray-900 mb-1">Price Action</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Méthodologie Pure</div>
                 </div>
                 <div>
-                    <div class="font-tech text-4xl font-bold text-[#00E676] mb-1">100%</div>
-                    <div class="text-sm text-gray-500 uppercase tracking-wider">Discipline</div>
+                    <div class="font-tech text-4xl font-bold text-[#00C853] mb-1">100%</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Autonomie Visée</div>
                 </div>
                 <div>
-                    <div class="font-tech text-4xl font-bold text-white mb-1">0 CFA</div>
-                    <div class="text-sm text-gray-500 uppercase tracking-wider">Accès Communauté</div>
+                    <div class="font-tech text-4xl font-bold text-gray-900 mb-1">Privé</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Accès Canal</div>
                 </div>
                 <div>
-                    <div class="font-tech text-4xl font-bold text-blue-400 mb-1">Optionnelle</div>
-                    <div class="text-sm text-gray-500 uppercase tracking-wider">Formation Structurée</div>
+                    <div class="font-tech text-4xl font-bold text-blue-600 mb-1">Mentorat</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Suivi sur Demande</div>
                 </div>
             </div>
         </section>
 
-        <!-- Problème VS Solution -->
         <section class="py-16 px-4 max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-8 items-stretch">
-                <!-- Côté Rouge -->
-                <div class="bg-red-950/10 border border-red-500/20 p-8 rounded-2xl relative overflow-hidden">
-                    <h3 class="font-tech text-xl font-bold text-red-400 mb-6 flex items-center space-x-2">
+                <div class="bg-red-50 border border-red-100 p-8 rounded-2xl shadow-sm">
+                    <h3 class="font-tech text-xl font-bold text-red-600 mb-6 flex items-center space-x-2">
                         <span>❌</span> <span>Pourquoi tant d'apprentis échouent :</span>
                     </h3>
-                    <ul class="space-y-4 text-gray-400">
+                    <ul class="space-y-4 text-gray-600">
                         <li class="flex items-start space-x-3">
                             <span class="text-red-500 font-bold">•</span>
-                            <span>Dépendance aveugle à des canaux de signaux miracles et irréalistes.</span>
+                            <span>Dépendance passive à des canaux de signaux miracles (sans jamais rien comprendre).</span>
                         </li>
                         <li class="flex items-start space-x-3">
                             <span class="text-red-500 font-bold">•</span>
-                            <span>Absence totale de Risk Management (comptes vidés en quelques trades).</span>
+                            <span>Absence totale de plan mathématique et de gestion rigoureuse des drawdowns.</span>
                         </li>
                         <li class="flex items-start space-x-3">
                             <span class="text-red-500 font-bold">•</span>
-                            <span>Impatience destructive face aux graphiques sur MetaTrader 5.</span>
+                            <span>Impatience psychologique et sur-trading destructeur devant les écrans.</span>
                         </li>
                     </ul>
                 </div>
-                <!-- Côté Vert -->
-                <div class="bg-emerald-950/10 border border-emerald-500/20 p-8 rounded-2xl relative overflow-hidden">
-                    <h3 class="font-tech text-xl font-bold text-[#00E676] mb-6 flex items-center space-x-2">
-                        <span>⚡</span> <span>La réalité de mon écosystème :</span>
+                <div class="bg-emerald-50 border border-emerald-100 p-8 rounded-2xl shadow-sm">
+                    <h3 class="font-tech text-xl font-bold text-[#00C853] mb-6 flex items-center space-x-2">
+                        <span>⚡</span> <span>La philosophie YM Trader :</span>
                     </h3>
-                    <ul class="space-y-4 text-gray-300">
+                    <ul class="space-y-4 text-gray-600">
                         <li class="flex items-start space-x-3">
-                            <span class="text-[#00E676] font-bold">•</span>
-                            <span>Observation en direct d'une lecture rigoureuse du prix (Price Action pur).</span>
+                            <span class="text-[#00C853] font-bold">•</span>
+                            <span>Apprentissage de la lecture pure des graphiques via l'étude des structures de prix.</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-[#00E676] font-bold">•</span>
-                            <span>Méthodologie stricte alignée sur les exigences de réussite des Prop Firms.</span>
+                            <span class="text-[#00C853] font-bold">•</span>
+                            <span>Focus absolu sur les compétences requises pour réussir les examens Prop Firms.</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-[#00E676] font-bold">•</span>
-                            <span>Gestion des risques rigide et psychologie froide d'un trader pragmatique.</span>
+                            <span class="text-[#00C853] font-bold">•</span>
+                            <span>Développement d'une psychologie froide, rigoureuse et totalement détachée des émotions.</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Programme Formation Teasing -->
         <section class="py-16 px-4 max-w-5xl mx-auto">
-            <h2 class="font-tech text-3xl font-bold text-center text-white mb-12">
-                L'Accompagnement pour ceux qui veulent <span class="text-[#00E676]">Aller Plus Loin</span>
+            <h2 class="font-tech text-3xl font-bold text-center text-gray-900 mb-12">
+                Le Plan de Route vers ton <span class="text-[#00C853]">Autonomie</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-[#0c1220]/60 border border-gray-800 p-6 rounded-xl">
-                    <div class="text-xs font-semibold text-[#00E676] uppercase tracking-wider mb-2">Axe 01</div>
-                    <h4 class="font-tech text-lg font-bold text-white mb-2">Analyse Fondamentale & Technique</h4>
-                    <p class="text-gray-400 text-sm">Comprendre les véritables zones de liquidité et les structures macro/micro du marché.</p>
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
+                    <div class="text-xs font-semibold text-[#00C853] uppercase tracking-wider mb-2">Axe 01</div>
+                    <h4 class="font-tech text-lg font-bold text-gray-900 mb-2">Compréhension Structurelle</h4>
+                    <p class="text-gray-500 text-sm">Apprendre à identifier les véritables zones de liquidité et les mouvements des institutions bancaires.</p>
                 </div>
-                <div class="bg-[#0c1220]/60 border border-gray-800 p-6 rounded-xl">
-                    <div class="text-xs font-semibold text-[#00E676] uppercase tracking-wider mb-2">Axe 02</div>
-                    <h4 class="font-tech text-lg font-bold text-white mb-2">Gestion Mathématique Absolue</h4>
-                    <p class="text-gray-400 text-sm">Verrouiller mathématiquement la protection de ton capital et gérer tes positions sainement.</p>
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
+                    <div class="text-xs font-semibold text-[#00C853] uppercase tracking-wider mb-2">Axe 02</div>
+                    <h4 class="font-tech text-lg font-bold text-gray-900 mb-2">Gestion Mathématique Absolue</h4>
+                    <p class="text-gray-500 text-sm">Mettre en place des règles strictes de protection de capital pour éliminer définitivement le risque de ruine.</p>
                 </div>
-                <div class="bg-[#0c1220]/60 border border-gray-800 p-6 rounded-xl">
-                    <div class="text-xs font-semibold text-[#00E676] uppercase tracking-wider mb-2">Axe 03</div>
-                    <h4 class="font-tech text-lg font-bold text-white mb-2">Objectifs & Règles Prop Firms</h4>
-                    <p class="text-gray-400 text-sm">Savoir naviguer à travers les contraintes de drawdown pour sécuriser et valider des comptes financés.</p>
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
+                    <div class="text-xs font-semibold text-[#00C853] uppercase tracking-wider mb-2">Axe 03</div>
+                    <h4 class="font-tech text-lg font-bold text-gray-900 mb-2">Règles & Objectifs Prop Firms</h4>
+                    <p class="text-gray-500 text-sm">Maîtriser la gestion fine du drawdown journalier et global pour débloquer et conserver des comptes financés importants.</p>
                 </div>
-                <div class="bg-[#0c1220]/60 border border-gray-800 p-6 rounded-xl">
-                    <div class="text-xs font-semibold text-[#00E676] uppercase tracking-wider mb-2">Axe 04</div>
-                    <h4 class="font-tech text-lg font-bold text-white mb-2">Mental & Rigueur d'Exécution</h4>
-                    <p class="text-gray-400 text-sm">Éliminer totalement l'impact des émotions (colère, euphorie) pour calquer tes actions sur ton plan.</p>
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
+                    <div class="text-xs font-semibold text-[#00C853] uppercase tracking-wider mb-2">Axe 04</div>
+                    <h4 class="font-tech text-lg font-bold text-gray-900 mb-2">Rigueur & Psychologie d'Exécution</h4>
+                    <p class="text-gray-500 text-sm">Éliminer l'impact négatif de l'euphorie ou de la frustration pour agir avec la régularité d'un algorithme froid.</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Final Central Section -->
         <section id="cta-section" class="py-20 px-4 max-w-4xl mx-auto text-center">
-            <div class="bg-gradient-to-b from-[#0c1220] to-[#050811] border border-gray-800/80 rounded-3xl p-12 glow-green">
-                <h2 class="font-tech text-4xl font-bold text-white mb-4">Prêt à suivre mes résultats ?</h2>
-                <p class="text-gray-400 max-w-xl mx-auto mb-8">Rejoins directement le canal WhatsApp pour avoir accès à mes partages, suivre mes profits, obtenir mes signaux et explorer les formations disponibles.</p>
+            <div class="bg-white border border-gray-200 rounded-3xl p-12 shadow-md glow-green">
+                <h2 class="font-tech text-4xl font-bold text-gray-900 mb-4">Prêt à acquérir ton autonomie ?</h2>
+                <p class="text-gray-500 max-w-xl mx-auto mb-8">Rejoins l'écosystème WhatsApp privé pour accéder à mes conseils quotidiens, échanger avec moi et découvrir comment intégrer l'accompagnement personnalisé.</p>
                 
-                <a href="https://wa.me/yorelmiensa&text=Salut%20Yorel,%20je%20veux%20rejoindre%20ton%20canal%20pour%20suivre%20tes%20profits%20et%20recevoir%20tes%20signaux%20!" 
+                <a href="https://api.whatsapp.com/send?phone=2250554365850&text=Salut%20Yorel,%20je%20viens%20de%20découvrir%20ton%20site.%20Je%20veux%20rejoindre%20ton%20canal%20privé%20et%20en%20savoir%20plus%20sur%20ta%20méthodologie%20!" 
                    target="_blank"
-                   class="inline-flex items-center space-x-3 bg-[#00E676] hover:bg-[#00c865] text-black font-tech font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                   class="inline-flex items-center space-x-3 bg-[#00C853] hover:bg-[#00b24a] text-white font-tech font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md shadow-emerald-500/10">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.763.461 3.42 1.267 4.873l-1.291 4.715 4.832-1.267c1.403.766 2.992 1.199 4.678 1.199 5.508 0 9.988-4.479 9.988-9.987 0-5.508-4.479-9.987-9.988-9.987zm5.521 14.133c-.227.64-.1.1.115-.154.84.182 1.03.11.144-.061-.036-.073-.146-.134-.365-.243-.218-.11-1.29-.636-1.49-.709-.201-.073-.347-.11-.493.11-.146.218-.565.71-.692.855-.128.146-.255.164-.473.055-.218-.11-.922-.34-1.758-1.086-.65-.58-1.09-1.297-1.217-1.515-.128-.218-.014-.336.095-.445.099-.099.218-.255.328-.382.11-.127.146-.218.218-.364.073-.146.036-.273-.018-.382-.055-.11-.493-1.184-.675-1.621-.177-.426-.357-.368-.493-.375-.127-.007-.273-.007-.419-.007-.146 0-.383.055-.583.273-.2.218-.765.747-.765 1.822 0 1.075.783 2.113.892 2.259.11.146 1.541 2.352 3.734 3.297.522.226.93.361 1.248.462.525.166.1.143.828.036.464-.069 1.429-.583 1.629-1.147z"/></svg>
-                    <span>Rejoindre la Communauté WhatsApp</span>
+                    <span>Rejoindre l'Écosystème Privé</span>
                 </a>
-                <p class="text-[11px] text-gray-500 mt-4">Redirection sécurisée vers l'application WhatsApp.</p>
+                <p class="text-[11px] text-gray-400 mt-4">Prise de contact directe et sécurisée via WhatsApp.</p>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="border-t border-gray-900 py-8 text-center text-xs text-gray-600">
-            <p class="mb-1">&copy; 2026 Yorel Trading. Tous droits réservés.</p>
-            <p>Le trading comporte des risques majeurs. Formez-vous rigoureusement avant d'engager des capitaux.</p>
+        <footer class="border-t border-gray-200 py-8 text-center text-xs text-gray-400">
+            <p class="mb-1">&copy; 2026 Yorel Miensa. Tous droits réservés.</p>
+            <p>Le trading comporte des risques majeurs de perte en capital. Formez-vous rigoureusement avant d'engager des capitaux.</p>
         </footer>
     </div>
 
